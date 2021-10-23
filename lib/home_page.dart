@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sprelax_flutter/Categories/rain_subcategories.dart';
+
+import '../Categories/rain_subcategories.dart';
+import '../setting_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -67,7 +69,11 @@ class _HomePageState extends State<HomePage> {
                     Image.asset("images/icons/nav_timer.png", height: 30, width: 30),
                     Image.asset("images/icons/nav_collection.png", height: 30, width: 30),
                     Image.asset("images/icons/nav_playing_list.png", height: 30, width: 30),
-                    Image.asset("images/icons/nav_more.png", height: 30, width: 30),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage()));
+                        },
+                        child: Image.asset("images/icons/nav_more.png", height: 30, width: 30)),
                   ],
                 )),
           ),
