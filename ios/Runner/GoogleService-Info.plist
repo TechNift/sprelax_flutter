@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>679496751035-acmqgs8oqftv6nrcd12bjv40gdu06a3o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.679496751035-acmqgs8oqftv6nrcd12bjv40gdu06a3o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC9drPZLn1SHyigjrxSGvMp0VvbWSwbbXA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>679496751035</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.sprelax-flutter</string>
+	<key>PROJECT_ID</key>
+	<string>sp-relax-ce90b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sp-relax-ce90b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:679496751035:ios:372da28917a7ae2a35569e</string>
+</dict>
+</plist>

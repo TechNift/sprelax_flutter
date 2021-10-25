@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "679496751035",
+    "project_id": "sp-relax-ce90b",
+    "storage_bucket": "sp-relax-ce90b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679496751035:android:03f518e95863175335569e",
+        "android_client_info": {
+          "package_name": "com.example.sprelax_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679496751035-mhah10d3q5tptegc84sfv8u4nkpi3qrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG4j88ha8gep1FbS0K9dP35tQKfeAj3fQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679496751035-mhah10d3q5tptegc84sfv8u4nkpi3qrh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "679496751035-acmqgs8oqftv6nrcd12bjv40gdu06a3o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sprelax-flutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
