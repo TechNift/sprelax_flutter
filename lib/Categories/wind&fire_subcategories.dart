@@ -19,6 +19,15 @@ class WindFireSubCategories extends StatelessWidget {
     "Fireplace"
   ];
 
+  final List<String> subCatSound = [
+    "sounds/air_light_wind.ogg",
+    "sounds/air_strong_wind.ogg",
+    "sounds/air_wind_mountain.ogg",
+    "sounds/air_wind_door.ogg",
+    "sounds/fire_campfire.ogg",
+    "sounds/fire_fireplace.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

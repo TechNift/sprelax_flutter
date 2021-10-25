@@ -27,6 +27,19 @@ class CountrySideSubCat extends StatelessWidget {
     "Train horn"
   ];
 
+  final List<String> subCatSound = [
+    "sounds/nature_day_blackbirds.ogg",
+    "sounds/nature_day_crows.ogg",
+    "sounds/nature_day_farm.ogg",
+    "sounds/nature_day_cowbells.ogg",
+    "sounds/nature_day_sheep.ogg",
+    "sounds/nature_day_horse.ogg",
+    "sounds/nature_day_eagle.ogg",
+    "sounds/nature_day_turtledove.ogg",
+    "sounds/nature_day_cicadas.ogg",
+    "sounds/nature_day_train_horn.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

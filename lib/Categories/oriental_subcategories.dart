@@ -23,6 +23,17 @@ class OrientalSubCategories extends StatelessWidget {
     "Guzheng",
   ];
 
+  final List<String> subCatSound = [
+    "sounds/oriental_bowls.ogg",
+    "sounds/oriental_gong.ogg",
+    "sounds/oriental_bells.ogg",
+    "sounds/oriental_om.ogg",
+    "sounds/oriental_flute.ogg",
+    "sounds/oriental_didgeridoo.ogg",
+    "sounds/oriental_chimes.ogg",
+    "sounds/oriental_string.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

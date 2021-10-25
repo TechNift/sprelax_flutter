@@ -21,6 +21,16 @@ class RelaxingSubCategories extends StatelessWidget {
     "Native Am.",
   ];
 
+  final List<String> subCatSound = [
+    "sounds/music_piano.ogg",
+    "sounds/music_guitar.ogg",
+    "sounds/music_violin.ogg",
+    "sounds/music_harp.ogg",
+    "sounds/music_flute.ogg",
+    "sounds/music_sax.ogg",
+    "sounds/music_native.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

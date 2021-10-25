@@ -15,6 +15,13 @@ class RiverSubCategories extends StatelessWidget {
     "Waterfall",
   ];
 
+  final List<String> subCatSound = [
+    "sounds/water_river.ogg",
+    "sounds/water_brook.ogg",
+    "sounds/water_creek.ogg",
+    "sounds/water_waterfall.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

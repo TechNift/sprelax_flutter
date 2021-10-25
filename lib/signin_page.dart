@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:sprelax_flutter/home_page.dart';
+import 'package:sprelax_flutter/setting_page.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -38,13 +39,12 @@ class SignInPage extends StatelessWidget {
                   labelStyle: TextStyle(color: clr),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: clr))),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
+            SizedBox(height: 40),
+            GestureDetector(
+              onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
               },
-              child: Text("LOG IN"),
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(clr)),
+              child: CustomButton(txt: "LOG IN"),
             ),
             SizedBox(height: 10),
             Text("REGISTRATION FOR AN ACCOUNT?", style: TextStyle(color: clr))
@@ -52,5 +52,25 @@ class SignInPage extends StatelessWidget {
         ),
       ),
     ));
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({this.txt});
+
+  final String? txt;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 45,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Color(0xff7030A0), borderRadius: BorderRadius.circular(30)),
+      child: Center(
+        child: Text('$txt',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+      ),
+    );
   }
 }

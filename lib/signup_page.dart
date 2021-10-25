@@ -39,13 +39,12 @@ class SignUpPage extends StatelessWidget {
                   labelStyle: TextStyle(color: clr),
                   focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: clr))),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
+            SizedBox(height: 40),
+            GestureDetector(
+              onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => SignInPage()));
               },
-              child: Text("Registration"),
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(clr)),
+              child: CustomButton(txt: "Registration"),
             ),
             SizedBox(height: 10),
             Text("ALREADY HAVE AN ACCOUNT?", style: TextStyle(color: clr))

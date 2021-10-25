@@ -23,6 +23,17 @@ class CitySubCategories extends StatelessWidget {
     "Train station",
   ];
 
+  final List<String> subCatSound = [
+    "sounds/city_musician.ogg",
+    "sounds/city_coffee_shop.ogg",
+    "sounds/city_fountain.ogg",
+    "sounds/city_children.ogg",
+    "sounds/city_traffic.ogg",
+    "sounds/city_subway.ogg",
+    "sounds/city_works.ogg",
+    "sounds/city_train_station.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

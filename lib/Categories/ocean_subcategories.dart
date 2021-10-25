@@ -18,32 +18,42 @@ class OceanSubCategories extends StatelessWidget {
     "Scuba diver",
     "Dolphins",
     "Sailboat",
-    "Whale"
+    "Whale",
+  ];
+
+  final List<String> subCatSound = [
+    "sounds/ocean_calm_waves.ogg",
+    "sounds/ocean_waves.ogg",
+    "sounds/ocean_seagulls.ogg",
+    "sounds/ocean_diver.ogg",
+    "sounds/ocean_dolphins.ogg",
+    "sounds/ocean_sailboat.ogg",
+    "sounds/ocean_whale.ogg"
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
         child: GridView.builder(
-          itemCount: subCatIcon.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,childAspectRatio: .7),
-          itemBuilder: (BuildContext context, i) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(30)),
-                    child: Center(child: Image.asset("images/icons/${subCatIcon[i]}.png", height: 30, width: 30)),
-                  ),
-                  SizedBox(height: 10),
-                  Text(subCatTitle[i], textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 12))
-                ],
+      itemCount: subCatIcon.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4, childAspectRatio: .7),
+      itemBuilder: (BuildContext context, i) {
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(30)),
+                child: Center(child: Image.asset("images/icons/${subCatIcon[i]}.png", height: 30, width: 30)),
               ),
-            );
-          },
-        ));
+              SizedBox(height: 10),
+              Text(subCatTitle[i], textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 12))
+            ],
+          ),
+        );
+      },
+    ));
   }
 }

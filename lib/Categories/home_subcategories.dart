@@ -27,6 +27,19 @@ class HomeSubCategories extends StatelessWidget {
     "Vintage Clock",
   ];
 
+  final List<String> subCatSound = [
+    "sounds/home_fan.ogg",
+    "sounds/home_air_conditioner.ogg",
+    "sounds/home_hairdryer.ogg",
+    "sounds/home_vacuum_cleaner.ogg",
+    "sounds/home_cat_purring.ogg",
+    "sounds/home_shower.ogg",
+    "sounds/home_washing_machine.ogg",
+    "sounds/home_jacuzzi.ogg",
+    "sounds/home_fridge.ogg",
+    "sounds/home_clock.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(

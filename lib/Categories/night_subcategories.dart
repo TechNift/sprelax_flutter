@@ -23,6 +23,17 @@ class NightSubCategories extends StatelessWidget {
     "Frogs",
   ];
 
+  final List<String> subCatSound = [
+    "sounds/nature_night_crickets.ogg",
+    "sounds/nature_night_grasshoppers.ogg",
+    "sounds/nature_night_owls.ogg",
+    "sounds/nature_night_wolves.ogg",
+    "sounds/nature_night_loons.ogg",
+    "sounds/nature_night_coyote.ogg",
+    "sounds/nature_night_coqui.ogg",
+    "sounds/nature_night_frogs.ogg"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
