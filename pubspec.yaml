@@ -31,6 +31,10 @@ dependencies:
   flutter_form_builder: ^6.2.0
   audioplayers: ^0.20.1
   get: ^4.3.8
+  firebase_auth: ^3.1.4
+  firebase_core: ^1.8.0
+  url_launcher: ^6.0.3
+  share: ^2.0.1
 
 dev_dependencies:
   flutter_test:
