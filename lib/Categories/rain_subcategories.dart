@@ -66,6 +66,10 @@ class _RainSubCategoriesState extends State<RainSubCategories> {
               setState(() {
                 selected = !selected;
                 _sounds.id = i;
+                // if(_sounds.id != null) {
+                //   _sounds.id = null;
+                //   audioPlayer.fixedPlayer!.stop();
+                // }
               });
             },
             child: Column(

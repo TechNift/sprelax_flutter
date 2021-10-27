@@ -1,6 +1,14 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sprelax_flutter/Controller/sound_controller.dart';
 
-class RelaxingSubCategories extends StatelessWidget {
+class RelaxingSubCategories extends StatefulWidget {
+  @override
+  _RelaxingSubCategoriesState createState() => _RelaxingSubCategoriesState();
+}
+
+class _RelaxingSubCategoriesState extends State<RelaxingSubCategories> {
   final List<String> subCatIcon = [
     "icon_music_piano",
     "icon_music_guitar",
@@ -31,6 +39,12 @@ class RelaxingSubCategories extends StatelessWidget {
     "sounds/music_native.ogg"
   ];
 
+  AudioCache audioPlayer = AudioCache();
+
+  bool selected = false;
+
+  Sounds _sounds = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,17 +54,26 @@ class RelaxingSubCategories extends StatelessWidget {
       itemBuilder: (BuildContext context, i) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Container(
-                height: 60,
-                width: 60,
-                decoration: BoxDecoration(color: Colors.black54, borderRadius: BorderRadius.circular(30)),
-                child: Center(child: Image.asset("images/icons/${subCatIcon[i]}.png", height: 30, width: 30)),
-              ),
-              SizedBox(height: 10),
-              Text(subCatTitle[i], textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 12))
-            ],
+          child: GestureDetector(
+            onTap: () {
+              audioPlayer.play(subCatSound[i]);
+              setState(() {
+                selected = !selected;
+                _sounds.id = i;
+              });
+            },
+            child: Column(
+              children: [
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(color: _sounds.id == i ? Colors.blueAccent : Colors.black54, borderRadius: BorderRadius.circular(30)),
+                  child: Center(child: Image.asset("images/icons/${subCatIcon[i]}.png", height: 30, width: 30)),
+                ),
+                SizedBox(height: 10),
+                Text(subCatTitle[i], textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 12))
+              ],
+            ),
           ),
         );
       },

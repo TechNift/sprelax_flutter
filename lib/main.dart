@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sprelax_flutter/Controller/sound_controller.dart';
-import 'package:sprelax_flutter/home_page.dart';
+
+import '../Controller/sound_controller.dart';
+import '../splash_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xff7030A0),
       ),
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }
