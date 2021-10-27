@@ -20,49 +20,57 @@ class SettingPage extends StatelessWidget {
                 SizedBox(height: 20),
                 MainContainer(txt: "Provide Feedback"),
                 SizedBox(height: 20),
-                MainContainer(
-                  txt: "Term and Conditions",
+                GestureDetector(
                   onTap: () {
                     launch('https://socialplugger.com/terms-and-conditions');
                   },
+                  child: MainContainer(
+                    txt: "Term and Conditions",
+                  ),
                 ),
                 SizedBox(height: 20),
-                MainContainer(
+                GestureDetector(
+                  onTap: () {
+                    launch('https://socialplugger.com/privacy-policy');
+                  },
+                  child: MainContainer(
                     txt: "Privacy Policy",
-                    onTap: () {
-                      launch('https://socialplugger.com/privacy-policy');
-                    }),
+                  ),
+                ),
                 SizedBox(height: 20),
                 MainContainer(txt: "Contact us"),
                 SizedBox(height: 20),
                 GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => FAQPage()));
-
                   },
-                  child: MainContainer(
-                      txt: "FAQ",
-                      // onTap: () {
-                      //   Navigator.push(context, MaterialPageRoute(builder: (context) => FAQPage()));
-                      // }
-                    ),
+                  child: MainContainer(txt: "FAQ"),
                 ),
                 SizedBox(height: 20),
-                MainContainer(
+                GestureDetector(
+                  onTap: () {
+                    launch('https://socialplugger.com');
+                  },
+                  child: MainContainer(
                     txt: "Visit Our Website",
-                    onTap: () {
-                      launch('https://socialplugger.com');
-                    }),
+                  ),
+                ),
                 SizedBox(height: 20),
-                MainContainer(txt: "Share THis App",onTap: (){
-                  Share.share("Social Plugger Relax App");
-                },),
+                GestureDetector(
+                  onTap: () {
+                    Share.share("Social Plugger Relax App");
+                  },
+                  child: MainContainer(txt: "Share THis App"),
+                ),
                 SizedBox(height: 20),
-                MainContainer(
+                GestureDetector(
+                  onTap: () {
+                    launch('https://socialplugger.com/about-us');
+                  },
+                  child: MainContainer(
                     txt: "About Us",
-                    onTap: () {
-                      launch('https://socialplugger.com/about-us');
-                    }),
+                  ),
+                ),
                 SizedBox(height: 30),
                 Text("demo@gmail.com", style: TextStyle(fontSize: 24)),
                 SizedBox(height: 10),
@@ -87,24 +95,20 @@ class SettingPage extends StatelessWidget {
 }
 
 class MainContainer extends StatelessWidget {
-  const MainContainer({this.txt, this.onTap});
+  const MainContainer({this.txt});
 
   final String? txt;
-  final Function? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => onTap,
-      child: Container(
-        height: 45,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(color: Color(0xff7030A0), borderRadius: BorderRadius.circular(10)),
-        child: Center(
-          child: Text('$txt',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
-        ),
+    return Container(
+      height: 45,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Color(0xff7030A0), borderRadius: BorderRadius.circular(10)),
+      child: Center(
+        child: Text('$txt',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
       ),
     );
   }

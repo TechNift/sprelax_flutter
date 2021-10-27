@@ -1,5 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sprelax_flutter/Controller/sound_controller.dart';
 
 class RainSubCategories extends StatefulWidget {
   @override
@@ -46,11 +48,13 @@ class _RainSubCategoriesState extends State<RainSubCategories> {
   AudioCache audioPlayer = AudioCache();
 
   bool selected = false;
+  Sounds _sounds = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Container(
         child: GridView.builder(
+          shrinkWrap: true,physics: NeverScrollableScrollPhysics(),
       itemCount: subCatIcon.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4, childAspectRatio: .7),
       itemBuilder: (BuildContext context, i) {
@@ -61,6 +65,7 @@ class _RainSubCategoriesState extends State<RainSubCategories> {
               audioPlayer.play(subCatSound[i]);
               setState(() {
                 selected = !selected;
+                _sounds.id = i;
               });
             },
             child: Column(
@@ -69,7 +74,7 @@ class _RainSubCategoriesState extends State<RainSubCategories> {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                      color: selected ? Colors.blue : Colors.black54, borderRadius: BorderRadius.circular(30)),
+                      color: _sounds.id == i ? Colors.blueAccent : Colors.black54, borderRadius: BorderRadius.circular(30)),
                   child: Center(child: Image.asset("images/icons/${subCatIcon[i]}.png", height: 30, width: 30)),
                 ),
                 SizedBox(height: 10),

@@ -43,7 +43,7 @@ class HomeSubCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: GridView.builder(
+        child: GridView.builder(shrinkWrap: true,physics: NeverScrollableScrollPhysics(),
       itemCount: subCatIcon.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4, childAspectRatio: .7),
       itemBuilder: (BuildContext context, i) {
