@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sprelax_flutter/signup_page.dart';
+import 'package:sprelax_flutter/onboarding_screen.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3)).then((_) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage1()));
     });
   }
 
